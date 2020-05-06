@@ -60,5 +60,10 @@ namespace ListingTodos.Controllers
         {
             return View(new ViewModel(todoService.GetTodo(id)));
         }
+        [HttpGet("search")]
+        public IActionResult SearchFor(string input)
+        {
+            return View("Index", new ViewModel(todoService.Search(input)));
+        }
     }
 }

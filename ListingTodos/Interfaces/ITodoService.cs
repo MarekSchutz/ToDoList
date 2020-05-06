@@ -14,5 +14,6 @@ namespace ListingTodos.Interfaces
         void CreateTodo(Todo todo);
         void DeleteTodo(long id);
         void EditTodo(Todo todo);
+        List<Todo> Search(string input);
     }
 }

@@ -55,5 +55,9 @@ namespace ListingTodos.Services
             dBContext.Update(todo);
             dBContext.SaveChanges();
         }
+        public List<Todo> Search(string input)
+        { 
+            return dBContext.Todos.Where(t => t.Title == input || t.Description == input).ToList();
+        }
     }
 }

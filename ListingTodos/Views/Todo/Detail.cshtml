@@ -10,9 +10,10 @@
 </head>
 <body>
     <h1>Detail</h1>
-    <b>@Html.Label("Todo description:")</b> @Html.Raw(Model.Todo.Title)<br />
-    <b>@Html.Label("Urgent:")</b> @Html.Raw(Model.Todo.IsUrgent)<br />
-    <b>@Html.Label("Done:")</b> @Html.Raw(Model.Todo.IsDone)<br />
+    <b>@Html.Label("Todo title:")</b> @Model.Todo.Title<br />
+    <b>@Html.Label("Todo description:")</b> @Model.Todo.Description<br />
+    <b>@Html.Label("Urgent:")</b> @Model.Todo.IsUrgent<br />
+    <b>@Html.Label("Done:")</b> @Model.Todo.IsDone<br />
     <a href="/">Back</a>
 </body>
 </html>

@@ -12,7 +12,8 @@
     <h1>Add new todo</h1>
     @using (Html.BeginForm("AddTodo", "Todo", FormMethod.Post))
     {
-        @Html.Label("Todo description:")@Html.TextBoxFor(t => t.Todo.Title)<br />
+        @Html.Label("Todo title:")@Html.TextBoxFor(t => t.Todo.Title)<br />
+        @Html.Label("Todo description:")@Html.TextBoxFor(t => t.Todo.Description)<br />
         @Html.Label("Urgent:")@Html.CheckBoxFor(t => t.Todo.IsUrgent)<br />
         <input type="submit" value="Submit" />
         <a href="/">Cancel</a>
