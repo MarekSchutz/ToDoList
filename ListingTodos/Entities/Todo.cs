@@ -16,7 +16,7 @@ namespace ListingTodos.Entities
         public string Description { get; set; }
         public bool IsUrgent { get; set; }
         public bool IsDone { get; set; }
-        public User User { get; set; }
+        public Assignee User { get; set; }
         public Todo()
         {
         }

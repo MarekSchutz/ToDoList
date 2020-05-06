@@ -13,6 +13,6 @@ namespace ListingTodos.Database
         {
         }
         public DbSet<Todo> Todos { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<Assignee> Assignees { get; set; }
     }
 }

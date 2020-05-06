@@ -8,16 +8,17 @@ namespace ListingTodos.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "Assignees",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(nullable: true)
+                    Name = table.Column<string>(nullable: false),
+                    Email = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.Id);
+                    table.PrimaryKey("PK_Assignees", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -27,6 +28,7 @@ namespace ListingTodos.Migrations
                     Id = table.Column<long>(nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     Title = table.Column<string>(nullable: false),
+                    Description = table.Column<string>(nullable: true),
                     IsUrgent = table.Column<bool>(nullable: false),
                     IsDone = table.Column<bool>(nullable: false),
                     UserId = table.Column<int>(nullable: true)
@@ -35,9 +37,9 @@ namespace ListingTodos.Migrations
                 {
                     table.PrimaryKey("PK_Todos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Todos_Users_UserId",
+                        name: "FK_Todos_Assignees_UserId",
                         column: x => x.UserId,
-                        principalTable: "Users",
+                        principalTable: "Assignees",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
@@ -54,7 +56,7 @@ namespace ListingTodos.Migrations
                 name: "Todos");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Assignees");
         }
     }
 }
