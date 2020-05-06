@@ -829,4 +829,4 @@ C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\Li
 C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\ListingTodos.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\ListingTodos.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\Razor\Views\Todo\AddAssignee.cshtml.g.cs
-C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\Razor\Views\Todo\Assignees.cshtml.g.cs
+C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\Razor\Views\Todo\ShowAssignees.cshtml.g.cs

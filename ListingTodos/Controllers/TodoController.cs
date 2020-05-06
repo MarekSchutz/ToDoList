@@ -29,11 +29,11 @@ namespace ListingTodos.Controllers
         }
         [HttpGet("add")]
         public IActionResult AddTodo()
-        {
-            return View();
+        { 
+            return View(new ViewModel(todoService.Assignees()));
         }
         [HttpPost("add")]
-        public IActionResult AddTodo(Todo todo)
+        public IActionResult AddTodo(Todo todo, string name)
         {
             todoService.CreateTodo(todo);
             return RedirectToAction("Index");
@@ -79,7 +79,7 @@ namespace ListingTodos.Controllers
         public IActionResult AddAssignee(Assignee assignee)
         {
             todoService.AddAssignee(assignee);
-            return RedirectToAction("Assignees");
+            return RedirectToAction("ShowAssignees");
         }
     }
 }
