@@ -823,3 +823,8 @@ C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\st
 C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\ListingTodos.dll
 C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\ListingTodos.pdb
 C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\ListingTodos.genruntimeconfig.cache
+C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\bin\Debug\netcoreapp3.1\Npgsql.dll
+C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\bin\Debug\netcoreapp3.1\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\ListingTodos.csproj.CoreCompileInputs.cache
+C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\ListingTodos.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\ListingTodos.MvcApplicationPartsAssemblyInfo.cache

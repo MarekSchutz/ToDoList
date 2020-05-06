@@ -17,7 +17,6 @@ namespace ListingTodos.Models
         }
         public ViewModel(List<Todo> todos)
         {
-            Todos = new List<Todo>();
             Todos = todos;
         }
         public ViewModel(Todo todo)

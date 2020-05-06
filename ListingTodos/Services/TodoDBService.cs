@@ -12,7 +12,7 @@ namespace ListingTodos.Services
 {
     public class TodoDBService : ITodoService
     {
-        private ApplicationDBContext dBContext;
+        private readonly ApplicationDBContext dBContext;
         public TodoDBService(ApplicationDBContext dBContext)
         {
             this.dBContext = dBContext;

@@ -13,9 +13,7 @@ namespace ListingTodos.Entities
         public long Id { get; set; }
         [Required]
         public string Title { get; set; }
-        [DefaultValue(false)]
         public bool IsUrgent { get; set; }
-        [DefaultValue(false)]
         public bool IsDone { get; set; }
         public User User { get; set; }
         public Todo()
