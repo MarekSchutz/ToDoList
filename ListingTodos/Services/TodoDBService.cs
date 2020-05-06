@@ -59,5 +59,14 @@ namespace ListingTodos.Services
         { 
             return dBContext.Todos.Where(t => t.Title == input || t.Description == input).ToList();
         }
+        public void AddAssignee(Assignee assignee)
+        {
+            dBContext.Assignees.Add(assignee);
+            dBContext.SaveChanges();
+        }
+        public List<Assignee> Assignees()
+        {
+            return dBContext.Assignees.ToList();
+        }
     }
 }

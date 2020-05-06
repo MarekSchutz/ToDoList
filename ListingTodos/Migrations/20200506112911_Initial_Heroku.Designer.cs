@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace ListingTodos.Migrations
 {
     [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20200506104432_Initial_Heroku")]
+    [Migration("20200506112911_Initial_Heroku")]
     partial class Initial_Heroku
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,6 +47,9 @@ namespace ListingTodos.Migrations
                         .HasColumnType("bigint")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
+                    b.Property<int?>("AssigneeId")
+                        .HasColumnType("integer");
+
                     b.Property<string>("Description")
                         .HasColumnType("text");
 
@@ -60,21 +63,18 @@ namespace ListingTodos.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int?>("UserId")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("AssigneeId");
 
                     b.ToTable("Todos");
                 });
 
             modelBuilder.Entity("ListingTodos.Entities.Todo", b =>
                 {
-                    b.HasOne("ListingTodos.Entities.Assignee", "User")
+                    b.HasOne("ListingTodos.Entities.Assignee", "Assignee")
                         .WithMany("Todos")
-                        .HasForeignKey("UserId");
+                        .HasForeignKey("AssigneeId");
                 });
 #pragma warning restore 612, 618
         }

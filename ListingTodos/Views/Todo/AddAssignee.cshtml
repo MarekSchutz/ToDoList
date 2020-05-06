@@ -1,0 +1,21 @@
+﻿@using ListingTodos.Models
+@model ViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddAssignee</title>
+</head>
+<body>
+    <h1>Add new assignee</h1>
+    @using (Html.BeginForm("AddAssignee", "Todo", FormMethod.Post))
+    {
+        @Html.Label("Assignee name:")@Html.TextBoxFor(t => t.Assignee.Name)<br />
+        @Html.Label("Assignee email:")@Html.TextBoxFor(t => t.Assignee.Email)<br />
+        <input type="submit" value="Submit" />
+        <a href="/">Cancel</a>
+    }
+</body>
+</html>

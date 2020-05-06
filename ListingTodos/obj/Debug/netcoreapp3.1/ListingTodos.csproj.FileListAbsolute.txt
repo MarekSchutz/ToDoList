@@ -828,3 +828,5 @@ C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\bin\Debug\netcoreapp3.1\Np
 C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\ListingTodos.csproj.CoreCompileInputs.cache
 C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\ListingTodos.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\ListingTodos.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\Razor\Views\Todo\AddAssignee.cshtml.g.cs
+C:\Users\Marek\Desktop\greenfox\ToDoList\ListingTodos\obj\Debug\netcoreapp3.1\Razor\Views\Todo\Assignees.cshtml.g.cs

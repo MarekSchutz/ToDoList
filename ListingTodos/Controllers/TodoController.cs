@@ -65,5 +65,21 @@ namespace ListingTodos.Controllers
         {
             return View("Index", new ViewModel(todoService.Search(input)));
         }
+        [HttpGet("assignees")]
+        public IActionResult ShowAssignees()
+        {
+            return View(new ViewModel(todoService.Assignees()));
+        }
+        [HttpGet("add-assignee")]
+        public IActionResult AddAssignee()
+        {
+            return View();
+        }
+        [HttpPost("add-assignee")]
+        public IActionResult AddAssignee(Assignee assignee)
+        {
+            todoService.AddAssignee(assignee);
+            return RedirectToAction("Assignees");
+        }
     }
 }

@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Assignees</title>
+</head>
+<body>
+    <h1>List of Assignees:</h1>
+    <a href="/add-assignee">Add new assignee</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var assignee in Model.Assignees)
+            {
+                <tr>
+                    <td>@assignee.Id</td>
+                    <td><a href="@assignee.Id/detail">@assignee.Name</a></td>
+                    <td>@assignee.Email</td>
+                    <td><form action="@assignee.Id/delete" method="Post"><button>delete</button></form></td>
+                    <td><form action="@assignee.Id/edit" method="Get"><button>edit</button></form></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

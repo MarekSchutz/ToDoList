@@ -12,6 +12,10 @@ namespace ListingTodos.Database
         public ApplicationDBContext(DbContextOptions options) : base(options)
         {
         }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Assignee>().HasMany(a => a.Todos).WithOne(t => t.Assignee);
+        }
         public DbSet<Todo> Todos { get; set; }
         public DbSet<Assignee> Assignees { get; set; }
     }

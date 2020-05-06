@@ -11,9 +11,19 @@ namespace ListingTodos.Models
     {
         public Todo Todo { get; set; }
         public List<Todo> Todos { get; set; }
+        public Assignee Assignee { get; set; }
+        public List<Assignee> Assignees { get; set; }
         public ViewModel()
         {
 
+        }
+        public ViewModel(Assignee assignee)
+        {
+            Assignee = assignee;
+        }
+        public ViewModel(List<Assignee> assignees)
+        {
+            Assignees = assignees;
         }
         public ViewModel(List<Todo> todos)
         {

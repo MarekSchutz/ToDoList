@@ -31,23 +31,23 @@ namespace ListingTodos.Migrations
                     Description = table.Column<string>(nullable: true),
                     IsUrgent = table.Column<bool>(nullable: false),
                     IsDone = table.Column<bool>(nullable: false),
-                    UserId = table.Column<int>(nullable: true)
+                    AssigneeId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Todos", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Todos_Assignees_UserId",
-                        column: x => x.UserId,
+                        name: "FK_Todos_Assignees_AssigneeId",
+                        column: x => x.AssigneeId,
                         principalTable: "Assignees",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Todos_UserId",
+                name: "IX_Todos_AssigneeId",
                 table: "Todos",
-                column: "UserId");
+                column: "AssigneeId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -10,10 +10,10 @@
 </head>
 <body>
     <h1>TODOS FOR TODAY:</h1>
-    <a href="/add">Add new todo</a>
+    <a href="/add">Add new todo</a><a href="/assigness">List of assignees</a>
     @using (Html.BeginForm("SearchFor","Todo", FormMethod.Get))
     {
-        <input type="search" placeholder="Search..."/>
+        <input type="search" name="input" placeholder="Search..."/>
         <input type="submit" value="Search"/>
     }
     <table>
@@ -22,17 +22,19 @@
                 <th>ID</th>
                 <th>Title</th>
                 <th>Description</th>
+                <th>Assignee</th>
                 <th>DONE</th>
                 <th>URGENT</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var todo in Model.Todos.ToList())
+            @foreach (var todo in Model.Todos)
             {
                 <tr>
                     <td>@todo.Id</td>
                     <td><a href="@todo.Id/detail">@todo.Title</a></td>
                     <td>@todo.Description</td>
+                    <td>@todo.Assignee</td>
                     <td>@todo.IsDone</td>
                     <td>@todo.IsUrgent</td>
                     <td><form action="@todo.Id/delete" method="Post"><button>delete</button></form></td>
