@@ -1,0 +1,21 @@
+﻿@using ListingTodos.Models
+@model ViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add Todo</title>
+</head>
+<body>
+    <h1>Add new todo</h1>
+    @using (Html.BeginForm("AddTodo", "Todo", FormMethod.Post))
+    {
+        @Html.Label("Todo description:")@Html.TextBoxFor(t => t.Todo.Title)<br />
+        @Html.Label("Urgent:")@Html.CheckBoxFor(t => t.Todo.IsUrgent)<br />
+        <input type="submit" value="Submit" />
+        <a href="/">Cancel</a>
+    }
+</body>
+</html>

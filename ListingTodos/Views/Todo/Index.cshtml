@@ -1,0 +1,41 @@
+﻿@using ListingTodos.Models
+@model ViewModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Todo list</title>
+    <link rel="stylesheet" type="text/css" href="~/Styles/styles.css">
+</head>
+<body>
+    <h1>TODOS FOR TODAY:</h1>
+    <a href="/add">Add new todo</a>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ACTION</th>
+                <th>DONE</th>
+                <th>URGENT</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var todo in Model.Todos.ToList())
+            {
+                <tr>
+                    <td>@todo.Id</td>
+                    <td><a href="@todo.Id/detail">@todo.Title</a></td>
+                    <td>@todo.IsDone</td>
+                    <td>@todo.IsUrgent</td>
+                    <td><form action="@todo.Id/delete" method="Post"><button>delete</button></form></td>
+                    <td><form action="@todo.Id/edit" method="Get"><button>edit</button></form></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <input type="button" onclick="location.href='@Url.Action("Index","Todo",new { isDone = true })'" value="FINISHED">
+    <input type="button" onclick="location.href='@Url.Action("Index","Todo",new { isDone = false })'" value="NOT FINISHED">
+    <input type="button" onclick="location.href='@Url.Action("Index","Todo")'" value="SHOW ALL">
+</body>
+</html>

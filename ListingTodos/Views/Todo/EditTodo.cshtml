@@ -1,0 +1,23 @@
+﻿@using ListingTodos.Models
+@model ViewModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit Todo</title>
+</head>
+<body>
+    <h1>Edit Todo</h1>
+    @using (Html.BeginForm("EditTodo", "Todo", FormMethod.Post))
+    {
+        @Html.HiddenFor(t => t.Todo.Id)
+        @Html.Label("Todo description:") @Html.TextBoxFor(t => t.Todo.Title)<br />
+        @Html.Label("Urgent:") @Html.CheckBoxFor(t => t.Todo.IsUrgent)<br />
+        @Html.Label("Done:") @Html.CheckBoxFor(t => t.Todo.IsDone)<br />
+        <input type="submit" value="Submit" />
+        <a href="/">Cancel</a>
+    }
+</body>
+</html>
